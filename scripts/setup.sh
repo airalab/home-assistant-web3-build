@@ -126,6 +126,10 @@ mqtt:
 
 advanced:
   channel: $ZIGBEE_CHANNEL
+  last_seen: 'ISO_8601'
+
+availability:
+  enabled: true
 
 frontend:
   enable: true
