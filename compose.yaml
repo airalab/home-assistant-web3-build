@@ -55,7 +55,7 @@ services:
   libp2p:
     container_name: libp2p-proxy
     restart: unless-stopped
-    image: ghcr.io/pinoutltd/libp2p-ws-proxy:v.${LIBP2P_VERSION}
+    image: ghcr.io/pinoutlimited/libp2p-ws-proxy:v.${LIBP2P_VERSION}
     ports:
       - 127.0.0.1:8888:8888
       - 127.0.0.1:9999:9999
