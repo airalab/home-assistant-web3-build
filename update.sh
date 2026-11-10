@@ -11,7 +11,7 @@ STR="$(docker image ls | grep ipfs/kubo)"
 read -a ADDR <<<"$STR"
 IPFS_CUR_VER=${ADDR[1]}
 
-STR="$(docker image ls | grep ghcr.io/pinoutltd/libp2p-ws-proxy)"
+STR="$(docker image ls | grep ghcr.io/pinoutlimited/libp2p-ws-proxy)"
 read -a ADDR <<<"$STR"
 LIBP2P_CUR_VER=${ADDR[1]}
 
@@ -114,7 +114,7 @@ if [ "$LIBP2P_CUR_VER" = "v.${LIBP2P_VERSION}" ]; then
 
 else
     echo "Delete old LIBP2P image"
-    docker image rm ghcr.io/pinoutltd/libp2p-ws-proxy:${LIBP2P_CUR_VER}
+    docker image rm ghcr.io/pinoutlimited/libp2p-ws-proxy:${LIBP2P_CUR_VER}
 fi
 
 if [ "$HA_CUR_VER" = "$HA_VERSION" ]; then
